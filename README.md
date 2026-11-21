@@ -1,4 +1,4 @@
-# Devosfera Blog
+# javaMexico.org
 
 Heavily customized version of the [AstroPaper](https://github.com/satnaing/astro-paper) theme with a new aesthetic, image galleries, global search modal, and dozens of visual and interactive improvements.
 

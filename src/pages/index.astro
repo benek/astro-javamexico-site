@@ -35,7 +35,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !("featured" in data && dat
       id="hero"
       class="hero-section relative pt-10 pb-14 sm:pt-14 sm:pb-20"
     >
-      <div class="relative z-10">
+      <div class="relative z-10 text-center">
         <!-- Terminal prompt badge -->
         <div
           class="mb-3 inline-flex items-center gap-2 rounded-full border border-border/40 bg-muted/20 px-3.5 py-1.5 font-firacode text-xs sm:text-sm"
@@ -56,7 +56,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !("featured" in data && dat
         <h1
           class="hero-title mb-3 text-5xl leading-[1.1] font-bold tracking-tight sm:text-6xl lg:text-7xl"
         >
-          {SITE.title}
+          {SITE.titleMainHeader}
           <a
             target="_blank"
             href="/rss.xml"
@@ -87,14 +87,23 @@ const recentPosts = sortedPosts.filter(({ data }) => !("featured" in data && dat
 
         <!-- Description -->
         <p
-          class="mt-7 max-w-xl text-base leading-relaxed opacity-75 sm:text-lg"
+          class="mx-auto mt-7 max-w-xl text-base leading-relaxed opacity-75 sm:text-lg"
         >
-          A space where curiosity turns into code. Exploring
-          web development, software architecture, and everything that makes the
-          tech world go round.
+          La Comunidad Java de México.
         </p>
-        <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
-          <p class="text-sm opacity-50 flex-shrink-0">
+        <div class="mt-8 flex flex-col items-center justify-center sm:flex-row">
+          <iframe data-testid="embed-iframe"
+                  style="border-radius:12px"
+                  src="https://open.spotify.com/embed/show/5MyEqz9EiACPDYVKHWkxkB?utm_source=generator&si=5cd57033758840fc"
+                  width="400"
+                  height="100"
+                  allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy">
+          </iframe>
+        </div>
+        <div class="mt-8 flex flex-col items-center justify-center sm:flex-row gap-4">
+          <!-- p class="text-sm opacity-50 flex-shrink-0">
             Written by
             <LinkButton
               class="font-medium underline decoration-dashed underline-offset-4 hover:text-accent"
@@ -103,12 +112,12 @@ const recentPosts = sortedPosts.filter(({ data }) => !("featured" in data && dat
             >
               {SITE.author}
             </LinkButton>
-          </p>
+          </p-->
 
           {
             // only display if at least one social link is enabled
             SOCIALS.length > 0 && (
-              <div class="sm:border-l border-border/40 sm:pl-4">
+              <div class="border-border/40 sm:pl-4">
                 <Socials />
               </div>
             )
